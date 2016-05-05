@@ -91,6 +91,7 @@
                                             <outlet property="posterImageView" destination="MtX-ww-h0P" id="BBV-gq-5nc"/>
                                             <outlet property="rateLabel" destination="lyd-QC-hzY" id="jNG-b1-BEw"/>
                                             <outlet property="titleLabel" destination="xhW-Tv-kLA" id="PkT-G5-yph"/>
+                                            <segue destination="kyF-wn-GMq" kind="push" identifier="showDetail" id="v4r-7u-n7K"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -113,6 +114,98 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="551" y="319"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="vAq-e9-Q7n">
+            <objects>
+                <viewController id="kyF-wn-GMq" customClass="DetailViewController" customModule="Flicks" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bBS-q9-bGK"/>
+                        <viewControllerLayoutGuide type="bottom" id="olr-CD-fjJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="U4e-Vs-egD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="j3i-BY-kNw">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dAX-Ic-bsx">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nla-gT-s8J">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <subviews>
+                                    <view alpha="0.80000000000000004" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dax-aX-Uog">
+                                        <rect key="frame" x="0.0" y="465" width="320" height="210"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fZj-Qw-dQC">
+                                                <rect key="frame" x="8" y="8" width="304" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="release date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZZN-u8-ilC">
+                                                <rect key="frame" x="8" y="31" width="65" height="14"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Overview" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ugB-xX-LLx">
+                                                <rect key="frame" x="8" y="53" width="304" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ugB-xX-LLx" secondAttribute="trailing" constant="8" id="TjN-Dw-uEi"/>
+                                            <constraint firstItem="ZZN-u8-ilC" firstAttribute="top" secondItem="fZj-Qw-dQC" secondAttribute="bottom" constant="2" id="VjE-0B-Mo0"/>
+                                            <constraint firstItem="ZZN-u8-ilC" firstAttribute="leading" secondItem="fZj-Qw-dQC" secondAttribute="leading" id="YF8-Po-YvP"/>
+                                            <constraint firstItem="fZj-Qw-dQC" firstAttribute="top" secondItem="dax-aX-Uog" secondAttribute="top" constant="8" id="fkO-Mm-rQh"/>
+                                            <constraint firstItem="fZj-Qw-dQC" firstAttribute="leading" secondItem="dax-aX-Uog" secondAttribute="leading" constant="8" id="hJA-cm-JgC"/>
+                                            <constraint firstItem="ugB-xX-LLx" firstAttribute="top" secondItem="ZZN-u8-ilC" secondAttribute="bottom" constant="8" id="iow-ln-Xap"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="fZj-Qw-dQC" secondAttribute="trailing" constant="8" id="wSp-n7-Ev7"/>
+                                            <constraint firstItem="ugB-xX-LLx" firstAttribute="leading" secondItem="fZj-Qw-dQC" secondAttribute="leading" id="wov-Ld-iJ8"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="dax-aX-Uog" firstAttribute="width" secondItem="Nla-gT-s8J" secondAttribute="width" id="V1R-TQ-PK1"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="olr-CD-fjJ" firstAttribute="top" secondItem="dAX-Ic-bsx" secondAttribute="bottom" id="1Nr-mU-aWc"/>
+                            <constraint firstAttribute="trailing" secondItem="Nla-gT-s8J" secondAttribute="trailing" id="8jE-1S-VRc"/>
+                            <constraint firstItem="Nla-gT-s8J" firstAttribute="leading" secondItem="U4e-Vs-egD" secondAttribute="leading" id="B1S-co-TvR"/>
+                            <constraint firstAttribute="trailing" secondItem="j3i-BY-kNw" secondAttribute="trailing" id="LE0-Zc-PBl"/>
+                            <constraint firstItem="dAX-Ic-bsx" firstAttribute="top" secondItem="bBS-q9-bGK" secondAttribute="bottom" id="UJO-vf-PjL"/>
+                            <constraint firstItem="olr-CD-fjJ" firstAttribute="top" secondItem="j3i-BY-kNw" secondAttribute="bottom" id="VOu-g8-BpK"/>
+                            <constraint firstItem="j3i-BY-kNw" firstAttribute="top" secondItem="bBS-q9-bGK" secondAttribute="bottom" id="bwe-5U-zQN"/>
+                            <constraint firstItem="olr-CD-fjJ" firstAttribute="top" secondItem="Nla-gT-s8J" secondAttribute="bottom" id="eJK-PH-avs"/>
+                            <constraint firstItem="j3i-BY-kNw" firstAttribute="leading" secondItem="U4e-Vs-egD" secondAttribute="leading" id="nbQ-LP-hkm"/>
+                            <constraint firstAttribute="trailing" secondItem="dAX-Ic-bsx" secondAttribute="trailing" id="oVt-py-0oZ"/>
+                            <constraint firstItem="dAX-Ic-bsx" firstAttribute="leading" secondItem="U4e-Vs-egD" secondAttribute="leading" id="pTJ-Qm-UOy"/>
+                            <constraint firstItem="Nla-gT-s8J" firstAttribute="top" secondItem="bBS-q9-bGK" secondAttribute="bottom" id="q4a-0J-zzt"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Nm0-gi-J84"/>
+                    <connections>
+                        <outlet property="highResPosterImageView" destination="dAX-Ic-bsx" id="2Kz-8f-GLo"/>
+                        <outlet property="infoView" destination="dax-aX-Uog" id="B6d-dh-DKh"/>
+                        <outlet property="overviewLabel" destination="ugB-xX-LLx" id="uKx-db-pPt"/>
+                        <outlet property="posterImageView" destination="j3i-BY-kNw" id="3UH-Mn-bP2"/>
+                        <outlet property="releaseDateLabel" destination="ZZN-u8-ilC" id="bcf-0g-sZt"/>
+                        <outlet property="scrollView" destination="Nla-gT-s8J" id="OOv-3d-a5K"/>
+                        <outlet property="titleLabel" destination="fZj-Qw-dQC" id="VI0-em-lCf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Wh-5Z-Pi9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="943" y="319"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="inh-X2-gm9">

@@ -15,6 +15,7 @@
 		5B0865AA1CDAB7AA00902186 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0865A91CDAB7AA00902186 /* MainViewController.swift */; };
 		5B0865AC1CDAB8BF00902186 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0865AB1CDAB8BF00902186 /* MovieCell.swift */; };
 		5B0865AE1CDAB9F800902186 /* InfiniteScrollActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0865AD1CDAB9F800902186 /* InfiniteScrollActivityView.swift */; };
+		5B0865B01CDAC65B00902186 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0865AF1CDAC65B00902186 /* DetailViewController.swift */; };
 		5C8790DA8C16DD035A2D78C6 /* Pods_Flicks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEA626FE977DFBDA7F9C7028 /* Pods_Flicks.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,7 @@
 		5B0865A91CDAB7AA00902186 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		5B0865AB1CDAB8BF00902186 /* MovieCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		5B0865AD1CDAB9F800902186 /* InfiniteScrollActivityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfiniteScrollActivityView.swift; sourceTree = "<group>"; };
+		5B0865AF1CDAC65B00902186 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		6306128F33C7AE6223AED2AA /* Pods-Flicks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flicks.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Flicks/Pods-Flicks.debug.xcconfig"; sourceTree = "<group>"; };
 		AEA626FE977DFBDA7F9C7028 /* Pods_Flicks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Flicks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				5B0865A91CDAB7AA00902186 /* MainViewController.swift */,
+				5B0865AF1CDAC65B00902186 /* DetailViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 				5B0865AE1CDAB9F800902186 /* InfiniteScrollActivityView.swift in Sources */,
 				5B0865AA1CDAB7AA00902186 /* MainViewController.swift in Sources */,
 				5B0865991CDAB74200902186 /* ViewController.swift in Sources */,
+				5B0865B01CDAC65B00902186 /* DetailViewController.swift in Sources */,
 				5B0865AC1CDAB8BF00902186 /* MovieCell.swift in Sources */,
 				5B0865971CDAB74200902186 /* AppDelegate.swift in Sources */,
 			);

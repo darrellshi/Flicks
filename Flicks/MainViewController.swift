@@ -87,16 +87,14 @@ class MainViewController: UIViewController {
         networkRequest()
     }
     
-    /*
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if(segue.identifier == "showDetail") {
             let cell = sender as! UITableViewCell
             let indexPath = tableView.indexPathForCell(cell)
-            let detailView = segue.destinationViewController as! DetailView
+            let detailView = segue.destinationViewController as! DetailViewController
             detailView.movie = filteredMovies![indexPath!.row]
         }
     }
- */
 }
 
 extension MainViewController: UITableViewDataSource, UITableViewDelegate {
