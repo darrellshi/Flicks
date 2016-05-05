@@ -6,7 +6,6 @@ Time spent: **10** hours spent in total
 
 ## User Stories
 
-<<<<<<< HEAD
 - User can view movie details by tapping on a cell.
 - User can select from a tab bar for either **Now Playing** or **Top Rated** movies.
 - Customize the selection effect of the cell.
@@ -18,7 +17,7 @@ Time spent: **10** hours spent in total
 
 Here's a walkthrough of implemented user stories:
 
-![flicks-demo]()
+![flicks-demo](flicks-demo.gif)
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
