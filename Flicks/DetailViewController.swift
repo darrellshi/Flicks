@@ -17,6 +17,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var releaseDateLabel: UILabel!
     @IBOutlet weak var overviewLabel: UILabel!
     
+    @IBOutlet weak var infoViewHeightContraint: NSLayoutConstraint!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var infoView: UIView!
     override func viewDidLoad() {
@@ -35,7 +36,12 @@ class DetailViewController: UIViewController {
             let overview = movie["overview"] as? String
             overviewLabel.text = overview
             overviewLabel.sizeToFit()
-            scrollView.contentSize = CGSize(width: scrollView.frame.size.width, height: infoView.frame.origin.y + overviewLabel.frame.origin.y + overviewLabel.frame.height + 60)
+            let contentHeight = overviewLabel.frame.origin.y + overviewLabel.bounds.size.height + 20
+            infoViewHeightContraint.constant = contentHeight
+            let backgroundView = UIView(frame: CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: UIScreen.mainScreen().bounds.width, height: contentHeight + 200)))
+            backgroundView.backgroundColor = UIColor.blackColor()
+            infoView.addSubview(backgroundView)
+            infoView.sendSubviewToBack(backgroundView)
             
             if let posterUrl = movie["poster_path"] as? String {
                 let smallImageRequest = NSURLRequest(URL: NSURL(string: "https://image.tmdb.org/t/p/w45" + posterUrl)!)
