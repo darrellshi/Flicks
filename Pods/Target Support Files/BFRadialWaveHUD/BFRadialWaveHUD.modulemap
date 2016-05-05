@@ -1,0 +1,6 @@
+framework module BFRadialWaveHUD {
+  umbrella header "BFRadialWaveHUD-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -30,6 +30,7 @@ class MainViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         searchBar.delegate = self
+        searchBar.keyboardAppearance = UIKeyboardAppearance.Dark
         
         hud = BFRadialWaveHUD.init(view: self.view, fullScreen: true, circles: 30, circleColor: UIColor.whiteColor(), mode: BFRadialWaveHUDMode.Default, strokeWidth: 1.5)
         hud!.show()

@@ -26,7 +26,7 @@
                                 <searchBar key="tableHeaderView" contentMode="redraw" barStyle="black" id="JDD-I5-95L">
                                     <rect key="frame" x="0.0" y="64" width="320" height="44"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                    <textInputTraits key="textInputTraits"/>
+                                    <textInputTraits key="textInputTraits" keyboardAppearance="alert"/>
                                 </searchBar>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="132" id="FX9-gQ-zm2" customClass="MovieCell" customModule="Flicks" customModuleProvider="target">
